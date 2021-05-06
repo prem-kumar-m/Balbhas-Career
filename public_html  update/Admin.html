@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BALBHAS</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: BizPage
+    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+  <style>
+    .form {
+      padding: 10px;
+      border-radius: 0.3em;
+      border: 1px solid lightblue;
+      width: 50%;
+      background-color: white;
+
+    }
+
+    p {
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header id="header" style="background-color:rgba(3, 116, 187, 0.8);">
+    <div class="col-lg-4">
+      <div id="logo" class="pull-left">
+        <a href="#intro"><img src="img/balbhas-w-6.png" alt="" title="" /></a>
+      </div>
+
+    </div>
+    <div class="col-lg-8"></div>
+
+  </header>
+
+  <br>
+
+  <section style="margin-top:100px;" id="about">
+    <div class="container">
+
+      <header class="section-header wow fadeInUp">
+        <h4 class="header-title">Welcome! Login as Resource Manager</h4>
+
+      </header>
+      <div style="width:auto," class="d-flex justify-content-center">
+        <form class="form" method="POST" autocomplete="off" id="form">
+          <div class="form-group ">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" id="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Example@gmail.com" required>
+          </div>
+          <div class="form-group ">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+              required>
+          </div>
+          <div class="d-flex justify-content-end">
+            <a href="#" data-toggle="modal" data-target="#exampleModalCenterEmail" btn="linkButton">Forgot password</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary" value="Login" data-toggle=" " data-target="" id="modalbtn"
+            onclick="validate()">Login</button>
+
+        </form>
+
+      </div>
+    </div>
+
+    <!-------  otp model  --------->
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenter">Verification Code</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="close0()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form method="post" id="otpform" autocomplete="off">
+            <div class="modal-body  ">
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="otp" required placeholder="Enter OTP Number" maxlength="6"
+                  size="6" pattern="[0-9]{6}" style="width:100%" />
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" onclick="resend()">Resend</button>
+              <button type="button" class="btn btn-primary" onclick="redirect()">Verify</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- forget password model -->
+    <div class="modal fade" id="exampleModalCenterEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterEmail" 
+    aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Enter Your Email ID</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="close4()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="email" class="form-control" id="email1" placeholder="example@gmail.com" style="width:100%"
+              required />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="resendModel1"data-dismiss="modal" onclick="getotp1()">Verify</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forgot password -->
+
+    <div class="modal fade" id="exampleModalforgot" tabindex="-1" role="dialog" aria-labelledby="exampleModalforgot"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenter1">Verification Code For Forget Password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="close2()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form method="post" id="otpform" autocomplete="off">
+            <div class="modal-body  ">
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="otp1" placeholder="Enter OTP Number" maxlength="6" size="6"
+                  pattern="[0-9]{6}" style="width:100%" />
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" onclick="resend()">Resend</button>
+              <button type="button" class="btn btn-primary" id="forgotPassbtn" onclick="confirmpass()">Verify</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- confirm password model -->
+
+
+    <div class="modal fade" id="exampleModalSetpass" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Setup your password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="close3()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="password" class="form-control" id="newpass" required placeholder="New Password"
+              style="width:100%" />
+          </div>
+          <div class="modal-body">
+            <input type="password" class="form-control" id="confirmpass" required placeholder="confirm Password"
+              style="width:100%" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="setuppass()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+  <br><br>
+  </main>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="js/main1.js"></script>
+
+</body>
+
+</html>

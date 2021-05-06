@@ -1,0 +1,67 @@
+@charset "utf-8";
+h2.section-title:after {
+	background: #dedede none repeat scroll 0 0;
+	content: "";
+	display: block;
+	height: 1px;
+	margin: 0.31225em auto 0;
+	position: relative;
+	width: 100px;
+}
+h2.section-title {
+	color: #dedede;
+	font-size: 3.8em;
+	font-weight: 700;
+	letter-spacing: -1px;
+	margin: 0 0 1.25em;
+	text-align: center;
+	text-transform: uppercase;
+}
+#our-work {
+	background: none repeat scroll 0 0 #fff;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+	padding: 6em 2em;
+	position: relative;
+	z-index: 2;
+}
+.tab-item {
+	background: #fff none repeat scroll 0 0;
+	margin-top: 1.25em;
+	padding: 1.25em 0;
+}
+.our-work-container {
+	display: block;
+	height: 100%;
+	position: relative;
+}
+.our-work-text {
+	background: #00283a none repeat scroll 0 0;
+	bottom: 0;
+	display: block;
+	left: 0;
+	opacity: 0;
+	padding: 1.25em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	transition: opacity 0.20s linear 0s;
+	-o-transition: opacityd 0.20s linear 0s;
+	-ms-transition: opacity 0.20s linear 0s;
+	-moz-transition: opacity 0.20s linear 0s;
+	-webkit-transition: opacity 0.20s linear 0s;
+	width: 100%;
+}
+.our-work-container:hover > .our-work-text {
+	opacity: 1;
+}
+.our-work-text h4 {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 600;
+}
+.our-work-text p {
+	color: #fff;
+	font-size: 0.8em;
+	opacity: 0.7;
+}/* CSS Document */
+

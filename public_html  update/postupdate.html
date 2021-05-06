@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BALBHAS</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: BizPage
+    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <!-- <header id="header" style="background-color:rgba(3, 116, 187, 0.8);">
+    <div class="col-lg-4">
+      <div id="logo" class="pull-left">
+        <a href="#intro"><img src="img/balbhas-w-6.png" alt="" title="" /></a>
+      </div>
+
+    </div>
+
+    
+  </header> -->
+
+  <header id="header" style="background-color:rgba(3, 116, 187, 0.8);">
+    <div class="container-fluid">
+      <div id="logo" class="pull-left">
+        <a href="#intro"><img src="img/balbhas-w-6.png" alt="" title="" /></a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <ul>
+            <li><a href="index.html#clients"><span class="text-content" style="font-size: 14px;">Our Clients</span> </a>
+            </li>
+          </ul>
+          </li>
+          <li> <button type="button" class="btn btn-primary "><a href="Admin.html"
+                style="color:white">Logout</a></button>
+            </span></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header>
+
+
+
+
+  <section class="module bg-dark-60 about-page-header" style='background-image: url("img/banner-methodology.jpg");'>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-sm-offset-12">
+          <h1 class="module-title font-alt mb-0"><span class="text"></span> Post Careers Update </span></h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+
+
+
+  <main id="main">
+
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+
+
+      <div class="container">
+
+        <header class="section-header wow fadeInUp">
+
+
+          <h4 class="header-title">POST CURRENT OPENINGS </h4>
+        </header>
+
+        <span class="b">
+
+          <!-- <button  class="btn btn-primary " style=" border-radius: 20px;" data-toggle="modal" data-target=".bd-example-modal-lg">Posted Opportunities</button> -->
+          <button type="button" class="btn btn-primary" id="post_button" style=" border-radius: 20px;" data-toggle="modal"
+            data-target=".bd-example-modal-lg"><a href="#editpost" style="color:white">Posted
+              Opportunities</a></button>
+        </span>
+
+
+        <form method="Post" id="form" onsubmit="return false" >
+          <div class="row">
+            <div class=" col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+              <div class="form-group">
+                <label class="header"> Role:</label>
+                <input type="text" class="form-control" id="role" required>
+              </div>
+            </div>
+            <div class=" col-md-3 box wow bounceInUp" data-wow-duration="1.4s">
+              <!-- <div class="applybtn">
+               <h4> <a href="#section1">Apply</a></h4>
+              </div> -->
+
+              <div id="nav-menu-container ">
+                <label>Status : </label>
+              </div>
+              <div class="col-lg-8 col-md-5 box wow bounceInUp">
+                <select id="status" class="form-control" data-rule="minlen:4" data-msg="Please select any option"
+                  id="status" required>
+                  <option value="">--Select--</option>
+                  <option value="Open">Open</option>
+                  <option value="Closed">Closed</option>
+
+                </select>
+               
+              </div>
+              
+             
+            </div>
+            <div class=" col-md-3 box wow bounceInUp" data-wow-duration="1.4s">
+              <!-- <div class="applybtn">
+               <h4> <a href="#section1">Apply</a></h4>
+              </div> -->
+
+              <div id="nav-menu-container ">
+                <label>Token : </label>
+              </div>
+              <div class="col-lg-5 col-md-5 box wow bounceInUp">
+                <input type="text" class="form-control" id="token" readonly>
+
+               
+              </div>
+              
+             
+            </div>
+
+
+            <div class=" col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+              <div class="form-group">
+                <label class="header"> Department:</label>
+                <input type="text" class="form-control" id="department" required>
+              </div>
+            </div>
+            <div class="  col-md-6 box wow bounceInUp " data-wow-duration="1.4s">
+              <div class="form-group">
+                <label class="header"> Job Description:</label>
+                <textarea class="form-control" id="jobDescription" rows="5" style="height: 100%;" required></textarea>
+
+              </div>
+            </div>
+            <div class=" col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+
+              <div class="form-group">
+                <label class="header"> Open Position:</label>
+                <input type="text" class="form-control" id="position"required>
+              </div>
+            </div>
+            <div class="  col-md-6 box wow bounceInUp " data-wow-duration="1.4s">
+              <div class="form-group">
+                <label class="header"> Skills Required:</label>
+                <textarea class="form-control" id="skill" rows="5" style="height: 100%;" required></textarea>
+              </div>
+            </div>
+            <div class=" col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+
+              <div class="form-group">
+                <label class="header"> Location:</label>
+                <input type="text" class="form-control" id="location" required>
+              </div>
+            </div>
+            <div class=" col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+
+              <div class="form-group">
+                <label class="header"> Experience Needed (in Years)</label>
+                <input type="text" class="form-control" id="experience" required>
+              </div>
+            </div>
+            <div style="margin-left: 30%;">
+            <button type="submit" class="btn btn-primary "  id="post_Now" style="margin-left: 40%; border-radius: 20px;" 
+              onclick="Submit()"> Post Now</button></div>
+
+              <div>
+              <button type="submit" class="btn btn-primary " style="margin-left: 40%; border-radius: 20px;" 
+              onclick="update()"> Update Now</button>
+            </div>
+          </div>
+      </div>
+
+    </section>
+
+
+    </form>
+
+  </main>
+
+
+  <div id="editpost"></div>
+  <section id="services">
+
+    <!-- <div class="container scroll"> -->
+    <div >
+      <div class="row col-lg-12">
+        <div class="col-lg-4">
+          <h6 class="header-title"> Posted Opportunities  </h6>   
+
+        </div>
+        <div class="col-lg-4"></div>  
+          
+        <div class="col-lg-4">
+          <input type="text"  id="myInput" onkeyup="myFunction()" style="align-items: center;" placeholder="Search for Role" title="Type in a Role"></input>
+
+        </div>
+      
+      </div>
+      
+      <table class="table table-hover">
+        <thead >
+          <tr class="rowedit">
+            <th scope="col">ID</th>
+            <th scope="col">Created on</th>
+            <th scope="col">Role</th>
+            <th scope="col">Positions</th>
+            <th scope="col">No.Of.Application Received</th>
+            <th scope="col">Status</th>
+            <th scope="col">Department</th>
+            <th scope="col">Skills</th>
+            <th scope="col">Location</th>
+            <th scope="col">Experience</th>
+            <th scope="col">Job Description</th>
+
+
+
+
+          </tr>
+        </thead>
+        <tbody id="myTable" class="rowedit">
+
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+
+
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <h5>Confirm to close the opening</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-success" onclick="closevalue() "> Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const url = 'http://52.255.170.184:8008/api/balbhas/postLogin/getPostedOpportunities'
+    var data = [];
+ 
+    async function getPosted() {
+      
+      const response = await fetch(url);
+      data = await response.json();
+     
+      buildTable(data.opportunityList);
+
+    }
+    buildTable(data.opportunityList)
+
+
+    function buildTable(data) {
+      
+      var table = document.getElementById('myTable'), rIndex;
+      for (var i = 0 in data) {
+        var row =
+
+          `<tr> 
+       <th scope="row" >${data[i].token} </th>
+         <td>${data[i].createdOn} </td>
+         <td>${data[i].role} </td>
+         <td>${data[i].positions} </td>
+         <td>${data[i].applicationReceived} </td>
+         <td>${data[i].status}</td> 
+         <td>${data[i].department}</td> 
+         <td>${data[i].skills}</td> 
+         <td>${data[i].location}</td> 
+         <td>${data[i].experience}</td> 
+         <td>${data[i].jobDescription} </td>
+          <td onclick="editvalue()" style="color:blue; cursor: pointer">Edit</td>
+          <td  data-toggle="modal" data-target="#exampleModalCenter" style="color:red; cursor: pointer">Close</td>
+         
+                 </tr>`
+        table.innerHTML += row
+
+      }
+      for (var i = 0; i < table.rows.length; i++) {
+        table.rows[i].onclick = function editvalue() {
+          window.scrollTo(0,350)
+          rIndex = this.rowIndex;          
+          document.getElementById("post_Now").disabled = true;
+          document.getElementById("token").value = this.cells[0].innerHTML;
+          document.getElementById("role").value = this.cells[2].innerHTML;
+          document.getElementById("position").value = this.cells[3].innerHTML;
+          // document.getElementById("experience").value = this.cells[4].innerHTML;
+          document.getElementById("status").value = this.cells[5].innerHTML;
+          document.getElementById("department").value = this.cells[6].innerHTML;
+          document.getElementById("skill").value = this.cells[7].innerHTML;
+          document.getElementById("location").value = this.cells[8].innerHTML;
+          document.getElementById("experience").value = this.cells[9].innerHTML;
+          document.getElementById("jobDescription").value = this.cells[10].innerHTML;
+            
+            
+        }
+       
+      }
+    }
+    getPosted()
+//----------closed--------------------
+    function closevalue(){
+      var token = document.getElementById('token').value      
+      var data = {
+        token:token,   
+}
+       const url3 = 'http://52.255.170.184:8008/api/balbhas/postLogin/updateCloseStatus' 
+      fetch(url3, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { "Content-type": "application/json; charset=UTF-8" }
+      }).then(function (response) {
+        if (response.ok) {
+          return response.json();
+
+        }
+        return Promise.reject(response);
+      }).then(function (data) {
+        if(data.success == true){
+          alert("successfully closed Opportunities")
+          window.location.reload() 
+        }
+        else{
+          alert("please check the Tocken");
+        }
+        
+      }).catch(function (error) {
+        alert("Something went wrong. Please try again!")
+         console.warn('Something went wrong.', error);
+    })
+     
+    }
+
+
+    //--------------------update----------------
+
+    function update () {
+   
+
+     var token = document.getElementById('token').value
+    var role = document.getElementById('role').value
+    var status = document.getElementById('status').value
+    var department = document.getElementById('department').value
+    var description = document.getElementById('jobDescription').value
+    var positions = document.getElementById('position').value
+    var skills = document.getElementById('skill').value
+    var location = document.getElementById('location').value
+    var experience = document.getElementById('experience').value
+    var data = {
+    token:token,
+    role:role,
+    department:department,
+    jobDescription:description,
+    positions:positions,
+    skills:skills,
+    location:location,
+    experience:experience,
+    status:status
+}
+     const url2 = 'http://52.255.170.184:8008/api/balbhas/postLogin/editJobOpportunities'
+
+    fetch(url2, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { "Content-type": "application/json; charset=UTF-8" }
+    }).then(function (response) {
+      if (response.ok) {
+        return response.json();
+
+      }
+      return Promise.reject(response);
+    }).then(function (data) {
+      if(data.success == true){
+          alert("updated successfully")
+          window.location.reload()
+
+        }
+       
+    }).catch(function (error) {
+      console.warn('Something went wrong.', error);
+      
+          alert("updated unsuccess! fill all the details and try it again")
+      
+    });
+
+ 
+  }
+
+
+
+
+
+  </script>
+
+  <script>
+    //-----------------------------inserted--------------------
+    function Submit () {
+      // var form =document.getElementById('form')
+      // form.addEventListener('submit',function(event){
+       // event.preventDefault();
+
+
+      var role = document.getElementById('role').value
+      var status = document.getElementById('status').value
+      var department = document.getElementById('department').value
+      var description = document.getElementById('jobDescription').value
+      var positions = document.getElementById('position').value
+      var skills = document.getElementById('skill').value
+      var location = document.getElementById('location').value
+      var experience = document.getElementById('experience').value
+
+      var data = {
+          role:role,
+    department:department,
+    jobDescription:description,
+    positions:positions,
+    skills:skills,
+    location:location,
+    experience:experience,
+}
+       const url2 = 'http://52.255.170.184:8008/api/balbhas/postLogin/insertOpportunity'
+ 
+      fetch(url2, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { "Content-type": "application/json; charset=UTF-8" }
+      }).then(function (response) {
+        if (response.ok) {
+          return response.json();
+
+        }
+        return Promise.reject(response);
+      }).then(function (data) {
+        if(data.success == true){
+          alert("Opportunitie Added successfully")
+          window.location.reload()
+       
+          
+        }
+        else{
+          alert("please check field");
+        }
+        
+      }).catch(function (error) {
+        console.warn('Something went wrong.', error);
+        alert("unable to updated fill all the details and try it again")
+
+    // })
+    })
+
+  }
+
+
+
+  function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    console.log(td)
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+  </script>
+
+
+
+
+
+
+
+
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Balbhas</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

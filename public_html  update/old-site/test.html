@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="map/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<title>Untitled Document</title>
+<style>
+    img {
+        max-width: 50%;
+        height: auto;
+    }
+</style>
+</head>
+
+<body>
+<img src="map/services-all.png" width="600" height="600" border="0" usemap="#Map" />
+<map name="Map" id="Map">
+        <area shape="poly" coords="444,534,305,296,578,292" href="solution-design.html" target="_self" alt="Solution Design" title="Solution Design" onmouseover="selectRegion('solutiondesign')" />
+        <area shape="poly" coords="161,534,302,297,442,533" href="project-management.html" target="_self" alt="Project Management" title="Project Management" onmouseover="selectRegion('projectmanagement')" />
+        <area shape="poly" coords="161,49,299,294,24,293" href="implementation-services.html" target="_self" alt="Implementation Services" title="Implementation Services" onmouseover="selectRegion('implementation')" />
+        <area shape="poly" coords="442,49,301,292,164,50" href="operational-management.html" target="_self" alt="Operational Management"  title="Operational Management" onmouseover="selectRegion('operational')" />
+        <area shape="poly" coords="445,48,303,294,578,291" href="procurement-consulting.html" target="_self" alt="Procurement Consulting"  title="Procurement Consulting" onmouseover="selectRegion('procurement')"/>
+        <area shape="poly" coords="21,295,302,295,161,534" href="managed-services.html" target="_self" alt="Managed Services"  title="Managed Services" onmouseover="selectRegion('managed')" />
+</map>
+
+<script src="map/jquery-3.1.1.slim.min.js"></script>
+<script src="map/image-map.js"></script>
+<script>
+    $(function () {
+        ImageMap('img[usemap]');
+    });
+    function selectRegion(region) {
+        document.querySelector("img").setAttribute('src', 'map/services-' + region + '.png');
+    }
+</script>
+</body>
+</html>
